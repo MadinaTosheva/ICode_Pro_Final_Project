@@ -15,7 +15,7 @@ class PhotosClient(BaseApiClient):
 
     def update_photo(self, photo_id: int, albumid: int, title: str, url: str):
         payload = {'albumId': albumid, 'title': title, 'url': url}
-        return self.session.post(self._url(f'/photos/{photo_id}'), json=payload)
+        return self.session.put(self._url(f'/photos/{photo_id}'), json=payload)
 
     def delete_photo(self, photo_id: int):
-        return self.session.get(self._url(f'/photos/{photo_id}'))
+        return self.session.delete(self._url(f'/photos/{photo_id}'))

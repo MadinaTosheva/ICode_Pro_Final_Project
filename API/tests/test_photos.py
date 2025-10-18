@@ -22,10 +22,10 @@ class TestPhotos:
 
 
     def test_update_photo(self, photos_api):
-        response = photos_api.update_photo(1, 11, 'Taylor Swift', 'https.taylor.com' )
+        response = photos_api.update_photo(1, 1, 'Taylor Swift', 'https.taylor.com' )
         assert response.status_code == 200
         data = response.json()
-        assert data['albumId'] == 11
+        assert data['albumId'] == 1
         assert data['title'] == 'Taylor Swift'
         assert data['url'] == 'https.taylor.com'
 

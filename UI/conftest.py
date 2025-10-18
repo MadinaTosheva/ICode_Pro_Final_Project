@@ -14,7 +14,7 @@ WEB_BASE_URL =  "https://www.saucedemo.com"
 @pytest.fixture(scope="function")
 def browser():
     options = webdriver.ChromeOptions()
-    # options.add_argument("--headless")  # не открывать браузер
+    options.add_argument("--headless")  # не открывать браузер
     options.add_argument("--disable-notifications")
     options.add_argument("--disable-popup-blocking")
     driver = webdriver.Chrome(options=options)

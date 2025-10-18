@@ -6,7 +6,7 @@ from UI.pages.login_page import LoginPage
 
 class TestLoginPage:
 
-    @staticmethod
+
     @pytest.mark.smoke
     def test_login_success(self, login_page: LoginPage, inventory_page: InventoryPage):
         (login_page
